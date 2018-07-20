@@ -3,7 +3,7 @@
   "host": "0.0.0.0",
   "port": 7777,
 
-  "keyLength": 10,
+  "keyLength": 2,
 
   "maxLength": 400000,
 
@@ -20,7 +20,8 @@
   ],
 
   "keyGenerator": {
-    "type": "phonetic"
+    "type": "dictionary",
+    "path": "./words"
   },
 
   "rateLimits": {
@@ -33,10 +34,8 @@
   },
 
   "storage": {
-    "type": "memcached",
-    "host": "127.0.0.1",
-    "port": 11211,
-    "expire": 2592000
+    "type": "file",
+    "path": "./data"
   },
 
   "documents": {
